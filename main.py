@@ -85,8 +85,8 @@ class KaiserFilter:
 
     # Plot original signal.
     figure()
-    plot(x, 'bo-')
-    title('Original Signal')
+    plot(t, x)
+    title('Original signal')
     grid(True)
 
     #------------------------------------------------
@@ -137,7 +137,7 @@ class KaiserFilter:
     plot((w / np.pi) * nyq_rate, np.absolute(h))
     xlabel('Frequency (Hz)')
     ylabel('Gain')
-    title('Frequency Response')
+    title('Frequency response')
     ylim(-0.05, 1.05)
     grid(True)
 
@@ -152,7 +152,7 @@ class KaiserFilter:
     figure()
     # Plot just the "good" part of the filtered signal.  The first N-1
     # samples are "corrupted" by the initial conditions.
-    plot(t[N-1:]-delay, filtered_x[N-1:], 'g', linewidth=4)
+    plot(t[N-1:]-delay, filtered_x[N-1:], 'g')
 
     title('Filtered signal')
     xlabel('t')
