@@ -35,3 +35,16 @@ Option | Type | Default | Description
 -n1 | int | 1950 | Noise minimum frequency
 -n2 | int | 2050 | Noise maximum frequency
 -p | bool | True | Play audios with and without noise
+
+
+## Results
+
+- `python main.py --duration 5 --cutoffhz1 1800 --cutoffhz2 2200 --noise_1 1950 --noise_2 2050`
+
+![Original Signal](samples/1950_2050_1800_2200_60_original.png?raw=true "Original Signal")
+
+![Signal with noise](samples/1950_2050_1800_2200_60_with_noise.png "Signal with noise")
+
+![Frequency Response](samples/1950_2050_1800_2200_60_freq_response.png "Frequency Response")
+
+![Filtered signal](samples/1950_2050_1800_2200_60_filtered.png "Filtered signal")
