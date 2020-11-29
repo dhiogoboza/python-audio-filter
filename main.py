@@ -19,7 +19,7 @@ NOISE_A = 500
 
 class Noiser:
   """
-  Utiliy class to generate a noise.
+  Utility class to generate a noise.
   Core extracted from https://stackoverflow.com/questions/33933842/how-to-generate-noise-in-frequency-range-with-numpy
   """
   def __init__(self):
@@ -122,7 +122,7 @@ class KaiserFilter:
     N, beta = kaiserord(self.ripple_db, width)
     N |= 1
 
-    # Use firwin with a Kaiser window to create a lowpass FIR filter.
+    # Use firwin with a Kaiser window to create a FIR filter.
     taps = firwin(N, [self.cutoff_hz_1 / nyq_rate, self.cutoff_hz_2 / nyq_rate], window=('kaiser', beta), pass_zero=True)
 
     # Use lfilter to filter x with the FIR filter.
